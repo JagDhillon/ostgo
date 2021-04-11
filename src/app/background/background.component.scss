@@ -1,0 +1,33 @@
+$rect-height: 5vh;
+$circle-radius: 5vh;
+$shape-color: #12A9D9;
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+  }
+
+circle {
+    fill: $shape-color;
+    opacity: 70%;
+}
+
+.triangle {
+    position: absolute;
+    bottom: $rect-height;
+  width: 0; 
+  height: 0; 
+  border-left: 100vw solid transparent;
+  
+  border-bottom: 8rem solid $shape-color;
+}
+
+.rectangle {
+    position: absolute;
+    bottom: 0;
+    background: $shape-color;
+    width: 100vw;
+    height: $rect-height;
+}

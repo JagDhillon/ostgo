@@ -1,0 +1,127 @@
+<form class="example-form">
+    <ng-container *ngIf="step==1">
+    <div class="slogan">
+        Let’s Start Success <br>
+        Automation
+    </div>
+    <mat-form-field class="example-full-width">
+        <mat-label>First Name</mat-label>
+        <input matInput required="true">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Last Name</mat-label>
+        <input matInput required="true">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput required="true" type="email">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input matInput required="true" type="password">
+    </mat-form-field>
+
+</ng-container>
+
+<ng-container *ngIf="step==2">
+    <div class="slogan">
+        Tell Us About Your Store
+    </div>
+    <mat-form-field class="example-full-width">
+        <mat-label>Store Name</mat-label>
+        <input matInput required="true">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Country</mat-label>
+        <input matInput required="true">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Address</mat-label>
+        <input matInput required="true">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Phone</mat-label>
+        <input matInput required="true">
+    </mat-form-field>
+</ng-container>
+
+<ng-container *ngIf="step==3">
+    <div class="slogan">
+        Which Best Describes You?
+    </div>
+    <mat-form-field class="example-full-width">
+        <mat-label>First Name</mat-label>
+        <input matInput required="true">
+    </mat-form-field>
+</ng-container>
+
+<ng-container *ngIf="step==4">
+    <div class="slogan">
+        What Type Of Business?
+    </div>
+    <mat-form-field class="example-full-width">
+        <mat-label>First Name</mat-label>
+        <input matInput required="true">
+    </mat-form-field>
+</ng-container>
+
+<ng-container *ngIf="step==5">
+    <div class="slogan">
+        How Do You Serve Your <br>
+        Customers?
+    </div>
+    <mat-form-field class="example-full-width">
+        <mat-label>First Name</mat-label>
+        <input matInput required="true">
+    </mat-form-field>
+</ng-container>
+
+<ng-container *ngIf="step==6">
+    <div class="slogan">
+        How Many Stores/Sites Will <br>
+        You Have?
+    </div>
+    <mat-form-field class="example-full-width">
+        <mat-label>First Name</mat-label>
+        <input matInput required="true">
+    </mat-form-field>
+</ng-container>
+
+<ng-container *ngIf="step==7">
+    <div class="slogan">
+        How Many Registers Per Site?
+    </div>
+    <mat-form-field class="example-full-width">
+        <mat-label>First Name</mat-label>
+        <input matInput required="true">
+    </mat-form-field>
+</ng-container>
+
+<div class="navigation">
+    <div *ngIf="step>1" class="navigation-step">
+        <button mat-mini-fab color="primary" (click)="step=step-1">
+            <mat-icon>arrow_backward</mat-icon>
+        </button>
+        Back
+    </div>
+    <div class="navigation-step">
+        Next
+        <ng-container *ngIf="step<7; else nextToDashboard">
+            <button mat-mini-fab color="primary" (click)="step=step+1">
+                <mat-icon>arrow_forward</mat-icon>
+            </button>
+        </ng-container>
+        <ng-template #nextToDashboard>
+            <button mat-mini-fab color="primary" [routerLink]="['/plandashboard']">
+                <mat-icon>arrow_forward</mat-icon>
+            </button>
+        </ng-template>
+    </div>
+</div>
+</form>

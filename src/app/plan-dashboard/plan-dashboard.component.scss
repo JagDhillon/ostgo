@@ -1,0 +1,28 @@
+.steps {
+    min-width: 150px;
+    max-width: 300px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+}
+
+.nextstep {
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0.5rem;
+    position: relative;
+    border-radius: 10px;
+
+
+    .nextstep-title {
+        font-size: large;
+    }
+
+    button {
+        right: 0.5rem;
+        float: right;
+        width: 40%;
+        box-shadow: 0.5px 3px 8px;
+    }
+}

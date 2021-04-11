@@ -1,0 +1,121 @@
+[debug] [2021-04-11T00:02:07.155Z] ----------------------------------------------------------------------
+[debug] [2021-04-11T00:02:07.157Z] Command:       /Users/jagdhillon/.nvm/versions/node/v12.16.2/bin/node /Users/jagdhillon/.nvm/versions/node/v12.16.2/bin/firebase init hosting
+[debug] [2021-04-11T00:02:07.157Z] CLI Version:   8.17.0
+[debug] [2021-04-11T00:02:07.157Z] Platform:      darwin
+[debug] [2021-04-11T00:02:07.157Z] Node Version:  v12.16.2
+[debug] [2021-04-11T00:02:07.167Z] Time:          Sun Apr 11 2021 10:02:07 GMT+1000 (Australian Eastern Standard Time)
+[debug] [2021-04-11T00:02:07.167Z] ----------------------------------------------------------------------
+[debug] [2021-04-11T00:02:07.167Z] 
+[debug] [2021-04-11T00:02:07.169Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-04-11T00:02:07.190Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-11T00:02:07.190Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/jagdhillon/projects/ostgo/frontmin
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-04-11T00:02:07.996Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-04-11T00:02:07.996Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-04-11T00:02:47.130Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-11T00:02:47.131Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-11T00:02:47.433Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Sun, 11 Apr 2021 00:02:47 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-11T00:02:47.448Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"ostgoApp","name":"ostgoApp"}
+[debug] [2021-04-11T00:02:48.806Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sun, 11 Apr 2021 00:02:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=981","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-11T00:02:48.806Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2021-04-11T00:02:49.069Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at module.exports (/Users/jagdhillon/.nvm/versions/node/v12.16.2/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/Users/jagdhillon/.nvm/versions/node/v12.16.2/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/Users/jagdhillon/.nvm/versions/node/v12.16.2/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:310:20)
+    at Request.EventEmitter.emit (domain.js:482:12)
+    at Request.<anonymous> (/Users/jagdhillon/.nvm/versions/node/v12.16.2/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:310:20)
+    at Request.EventEmitter.emit (domain.js:482:12)
+    at IncomingMessage.<anonymous> (/Users/jagdhillon/.nvm/versions/node/v12.16.2/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:416:28)
+    at IncomingMessage.emit (events.js:322:22)
+    at IncomingMessage.EventEmitter.emit (domain.js:482:12)
+    at endReadableNT (_stream_readable.js:1187:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2021-04-11T00:08:02.759Z] ----------------------------------------------------------------------
+[debug] [2021-04-11T00:08:02.761Z] Command:       /Users/jagdhillon/.nvm/versions/node/v12.16.2/bin/node /Users/jagdhillon/.nvm/versions/node/v12.16.2/bin/firebase init hosting
+[debug] [2021-04-11T00:08:02.761Z] CLI Version:   9.9.0
+[debug] [2021-04-11T00:08:02.761Z] Platform:      darwin
+[debug] [2021-04-11T00:08:02.761Z] Node Version:  v12.16.2
+[debug] [2021-04-11T00:08:02.762Z] Time:          Sun Apr 11 2021 10:08:02 GMT+1000 (Australian Eastern Standard Time)
+[debug] [2021-04-11T00:08:02.762Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-04-11T00:08:02.771Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-11T00:08:02.771Z] > authorizing via signed-in user (jagdhillon@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/jagdhillon/projects/ostgo/frontmin
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-04-11T00:08:07.017Z] > refreshing access token with scopes: []
+[debug] [2021-04-11T00:08:07.017Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-11T00:08:07.326Z] <<< HTTP RESPONSE 200 {"date":"Sun, 11 Apr 2021 00:08:07 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-11T00:08:07.357Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-04-11T00:08:08.051Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-04-11T00:08:08.051Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project ostgo-5432a (ostgo) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-04-11T00:10:58.069Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-04-11T00:10:58.233Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-04-11T00:10:58.233Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"8.3.3","browserURL":"https://www.gstatic.com/firebasejs/8.3.3/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/8.3.3/firebase.tgz"},"live":{"version":"8.3","browserURL":"https://www.gstatic.com/firebasejs/live/8.3/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/8.3/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js","auth":"https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js","database":"https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js","firestore":"https://www.gstatic.com/firebasejs/8.3.3/firebase-firestore.js","functions":"https://www.gstatic.com/firebasejs/8.3.3/firebase-functions.js","installations":"https://www.gstatic.com/firebasejs/8.3.3/firebase-installations.js","messaging":"https://www.gstatic.com/firebasejs/8.3.3/firebase-messaging.js","storage":"https://www.gstatic.com/firebasejs/8.3.3/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/8.3.3/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/8.3.3/firebase-remote-config.js","firestore.memory":"https://www.gstatic.com/firebasejs/8.3.3/firebase-firestore.memory.js"}}
+[info] ✔  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at /Users/jagdhillon/projects/ostgo/frontmin 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=492329247&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-04-11T00:11:40.885Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"01ce679a18d413899fa8","redirect_uri":"http://localhost:9005","state":"492329247"}
+[debug] [2021-04-11T00:11:41.219Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Sun, 11 Apr 2021 00:11:41 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With","etag":"W/\"a80a186461836e00cdc7a2bc158db5cb\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-3f088aa2.js gist.github.com/socket-worker-3f088aa2.js","x-github-request-id":"F2F6:3676:81DE94:92CFDF:60723EBC"}
+[debug] [2021-04-11T00:11:41.226Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-04-11T00:11:41.599Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-04-11T00:11:41.599Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"JagDhillon","id":13530017,"node_id":"MDQ6VXNlcjEzNTMwMDE3","avatar_url":"https://avatars.githubusercontent.com/u/13530017?v=4","gravatar_id":"","url":"https://api.github.com/users/JagDhillon","html_url":"https://github.com/JagDhillon","followers_url":"https://api.github.com/users/JagDhillon/followers","following_url":"https://api.github.com/users/JagDhillon/following{/other_user}","gists_url":"https://api.github.com/users/JagDhillon/gists{/gist_id}","starred_url":"https://api.github.com/users/JagDhillon/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/JagDhillon/subscriptions","organizations_url":"https://api.github.com/users/JagDhillon/orgs","repos_url":"https://api.github.com/users/JagDhillon/repos","events_url":"https://api.github.com/users/JagDhillon/events{/privacy}","received_events_url":"https://api.github.com/users/JagDhillon/received_events","type":"User","site_admin":false,"name":"Jag Dhillon","company":null,"blog":"","location":"Brisbane","email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":24,"public_gists":0,"followers":0,"following":0,"created_at":"2015-07-28T00:41:40Z","updated_at":"2021-04-11T00:11:02Z","private_gists":0,"total_private_repos":15,"owned_private_repos":15,"disk_usage":48033,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as JagDhillon 
+[info] 

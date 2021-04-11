@@ -1,0 +1,35 @@
+$shape-color: #12A9D9;
+
+.logo-slogan {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+.logo {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    color: $shape-color;
+    font-weight: bold;
+}
+
+.button-row {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10%;
+    display: flex;
+    width: 100%;
+}
+
+.button-row :first-child {
+    background-color: whitesmoke;
+}
+
+button {
+    border: none;
+    height: 2rem;
+    margin: 5vw;
+    flex: 1;
+    font-size: large;
+}
